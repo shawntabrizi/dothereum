@@ -1,0 +1,25 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: rust:1
+    steps:
+      - checkout
+      - run:
+          name: Print version
+          command: rustc --version; cargo --version; rustup --version
+      - restore_cache:
+          keys:
+            - cargo-{{ arch }}-{{ checksum "Cargo.lock" }}
+      - run:
+          name: Build node
+          command: cargo build
+      - save_cache:
+          paths:
+            - /usr/local/cargo/registry
+            - target/debug
+          key: cargo-{{ arch }}-{{ checksum "Cargo.lock" }}
+      - run:
+          name: Run tests
+          command: cargo test
