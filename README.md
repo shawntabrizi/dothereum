@@ -2,6 +2,21 @@
 
 The Dothereum reference node implemention; written in Rust, based on the Substrate `v2.0` framework.
 
+### Dothereum 0.1 Alpha
+
+- `stage`: Testnet 0.1 Alpha
+- `id`: `xth_alpha`
+- `protocolId`: `xth`
+- `ss58Format`: 20
+- `tokenDecimals`: 18
+- `tokenSymbol`: XTH
+
+You can directly connect to the public testnet with:
+
+```bash
+dothereum --chain ./res/dothereum.json
+```
+
 ### Build the node from source
 
 1. Install Rust:
@@ -24,14 +39,6 @@ The Dothereum reference node implemention; written in Rust, based on the Substra
   ```bash
   ./target/release/dothereum
   ```
-
-### Run a Dothereum development chain
-
-You can quickly start a local development chain with:
-
-```bash
-dothereum --dev
-```
 
 ### Run a local Dothereum testnet
 
@@ -59,6 +66,14 @@ dothereum --chain local \
 ```
 
 To add more validators to your network, use the preconfigured accounts `--charlie`, `--dave`, `--eve`, and `--ferdie`. Make sure to connect them to Alice's and Bob's nodes using the `--bootnodes` flag.
+
+### Run a Dothereum development chain
+
+You can quickly start a local development chain with:
+
+```bash
+dothereum --dev
+```
 
 ### Get help
 
