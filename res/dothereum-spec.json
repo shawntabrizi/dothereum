@@ -22,11 +22,11 @@
       "babe": {
         "authorities": [
           [
-            "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
+            "34emBBRtEPDY2ukwk8iZq4Vv2b8ii5ch2VPJqGqm2UHeC2s4",
             1
           ],
           [
-            "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
+            "31k183xTXzxgHJvGUB4PFf8sxFiNmaGLBwddHo5ENCQoF2EZ",
             1
           ]
         ]
@@ -34,11 +34,11 @@
       "grandpa": {
         "authorities": [
           [
-            "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
+            "31mLd3b6P3iMMrM7W9YFXQksfseXp4gFYYVcLuAKfALxGmBJ",
             1
           ],
           [
-            "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre",
+            "34FsSb4J9TtYjjJ4Cxjw3uEL7Cx9hEJAQ2qvc2vrt4NyDfbA",
             1
           ]
         ]
@@ -54,7 +54,11 @@
           "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
           "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
           "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
-          "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre"
+          "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre",
+          "31mLd3b6P3iMMrM7W9YFXQksfseXp4gFYYVcLuAKfALxGmBJ",
+          "34FsSb4J9TtYjjJ4Cxjw3uEL7Cx9hEJAQ2qvc2vrt4NyDfbA",
+          "34emBBRtEPDY2ukwk8iZq4Vv2b8ii5ch2VPJqGqm2UHeC2s4",
+          "31k183xTXzxgHJvGUB4PFf8sxFiNmaGLBwddHo5ENCQoF2EZ"
         ]
       },
       "balances": {
@@ -97,6 +101,22 @@
           ],
           [
             "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre",
+            1152921504606846976
+          ],
+          [
+            "31mLd3b6P3iMMrM7W9YFXQksfseXp4gFYYVcLuAKfALxGmBJ",
+            1152921504606846976
+          ],
+          [
+            "34emBBRtEPDY2ukwk8iZq4Vv2b8ii5ch2VPJqGqm2UHeC2s4",
+            1152921504606846976
+          ],
+          [
+            "34FsSb4J9TtYjjJ4Cxjw3uEL7Cx9hEJAQ2qvc2vrt4NyDfbA",
+            1152921504606846976
+          ],
+          [
+            "31k183xTXzxgHJvGUB4PFf8sxFiNmaGLBwddHo5ENCQoF2EZ",
             1152921504606846976
           ]
         ],
