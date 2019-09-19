@@ -17,6 +17,8 @@ You can directly connect to the public testnet with:
 dothereum --chain ./res/dothereum.json
 ```
 
+- Telemetry: [telemetry.polkadot.io/#list/Dothereum 0.1 Alpha](https://telemetry.polkadot.io/#list/Dothereum%200.1%20Alpha)
+
 ### Build the node from source
 
 1. Install Rust:
