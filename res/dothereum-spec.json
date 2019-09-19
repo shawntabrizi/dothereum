@@ -22,11 +22,11 @@
       "babe": {
         "authorities": [
           [
-            "31VGz261j1xA2Ym4YaymG1MxSTM6p5Yi3jsBA5kpPCCehMnE",
+            "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
             1
           ],
           [
-            "36HRqqRfrk8bu12qMRdrZFFsyxNxtfwrSLsnzaRDRjV4LE2f",
+            "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
             1
           ]
         ]
@@ -34,11 +34,11 @@
       "grandpa": {
         "authorities": [
           [
-            "31aJzwWMD8G3oHMEpruJykTfhU64D1ZCvt1N55Zz3X6XD7ip",
+            "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
             1
           ],
           [
-            "31nq3pcnYvaPpo9yQGnK5rgF21Jpnvr6wvN2CHzSEYZkZhTP",
+            "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre",
             1
           ]
         ]
@@ -53,7 +53,8 @@
           "36Dcg1M7KxjeMAkNmg7AjtL9GUKxhJ8E6FgmgsqNh3S6CRf7",
           "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
           "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
-          "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ"
+          "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
+          "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre"
         ]
       },
       "balances": {
@@ -92,6 +93,10 @@
           ],
           [
             "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
+            1152921504606846976
+          ],
+          [
+            "321gKwiS39CBR9GGCZJjaPCBphUXGY3Bw9LoaE2qqEQCrKre",
             1152921504606846976
           ]
         ],
