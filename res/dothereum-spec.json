@@ -22,11 +22,11 @@
       "babe": {
         "authorities": [
           [
-            "5Ei2PrVX43T5JMoVgQeLTtHuPCCBrV2HsRYDfbFmfEj5QjDK",
+            "31VGz261j1xA2Ym4YaymG1MxSTM6p5Yi3jsBA5kpPCCehMnE",
             1
           ],
           [
-            "5EPjo4npFcASHadKLEoA9KQUmttDdko7dfBSRUmoHfLdEHAR",
+            "36HRqqRfrk8bu12qMRdrZFFsyxNxtfwrSLsnzaRDRjV4LE2f",
             1
           ]
         ]
@@ -34,71 +34,71 @@
       "grandpa": {
         "authorities": [
           [
-            "5EX94wcrteuttrL91tDAHaEgJYGxzYdoA3oRBbagQmNmisHG",
+            "31aJzwWMD8G3oHMEpruJykTfhU64D1ZCvt1N55Zz3X6XD7ip",
             1
           ],
           [
-            "5DLPMGqZoAL2a6pGV9RwXfZw79GXVRxqCUp1mM4jzmbae212",
+            "31nq3pcnYvaPpo9yQGnK5rgF21Jpnvr6wvN2CHzSEYZkZhTP",
             1
           ]
         ]
       },
       "indices": {
         "ids": [
-          "5Ei2PrVX43T5JMoVgQeLTtHuPCCBrV2HsRYDfbFmfEj5QjDK",
-          "5EPjo4npFcASHadKLEoA9KQUmttDdko7dfBSRUmoHfLdEHAR",
-          "5EX94wcrteuttrL91tDAHaEgJYGxzYdoA3oRBbagQmNmisHG",
-          "5DLPMGqZoAL2a6pGV9RwXfZw79GXVRxqCUp1mM4jzmbae212",
-          "5Gdgoyey8Zg1MgPWGn7GBo3RRXz3DjLDqzmwVdeQ36RN7AjF",
-          "5E2jt8fT92HDXBmPdnC9vQxHoJM5wm4zTLH7vPgcM5gh8Apb",
-          "5DcdaPn3xDFG6uPmdSseHY2iDdo4gupoAWXhDVHm7qeVPkUe",
-          "5G1FvSFtoJsunaPFUHTmW9p3P8B5U78715RiQm6VULavsKCu",
-          "5CAp5EEym1g5JFin5JUzMzAQavRaNDcc6bNgmZB85pGciffm"
+          "35THTDfRy8HJETR6pKvcSHhnzcoEGe6AWcYDuGRMhRg8Dk4e",
+          "31VGz261j1xA2Ym4YaymG1MxSTM6p5Yi3jsBA5kpPCCehMnE",
+          "36HRqqRfrk8bu12qMRdrZFFsyxNxtfwrSLsnzaRDRjV4LE2f",
+          "31aJzwWMD8G3oHMEpruJykTfhU64D1ZCvt1N55Zz3X6XD7ip",
+          "31nq3pcnYvaPpo9yQGnK5rgF21Jpnvr6wvN2CHzSEYZkZhTP",
+          "36Dcg1M7KxjeMAkNmg7AjtL9GUKxhJ8E6FgmgsqNh3S6CRf7",
+          "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
+          "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
+          "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ"
         ]
       },
       "balances": {
         "balances": [
           [
-            "5Ei2PrVX43T5JMoVgQeLTtHuPCCBrV2HsRYDfbFmfEj5QjDK",
+            "35THTDfRy8HJETR6pKvcSHhnzcoEGe6AWcYDuGRMhRg8Dk4e",
             1152921504606846976
           ],
           [
-            "5EPjo4npFcASHadKLEoA9KQUmttDdko7dfBSRUmoHfLdEHAR",
+            "31VGz261j1xA2Ym4YaymG1MxSTM6p5Yi3jsBA5kpPCCehMnE",
             1152921504606846976
           ],
           [
-            "5EX94wcrteuttrL91tDAHaEgJYGxzYdoA3oRBbagQmNmisHG",
+            "36HRqqRfrk8bu12qMRdrZFFsyxNxtfwrSLsnzaRDRjV4LE2f",
             1152921504606846976
           ],
           [
-            "5DLPMGqZoAL2a6pGV9RwXfZw79GXVRxqCUp1mM4jzmbae212",
+            "31aJzwWMD8G3oHMEpruJykTfhU64D1ZCvt1N55Zz3X6XD7ip",
             1152921504606846976
           ],
           [
-            "5Gdgoyey8Zg1MgPWGn7GBo3RRXz3DjLDqzmwVdeQ36RN7AjF",
+            "31nq3pcnYvaPpo9yQGnK5rgF21Jpnvr6wvN2CHzSEYZkZhTP",
             1152921504606846976
           ],
           [
-            "5E2jt8fT92HDXBmPdnC9vQxHoJM5wm4zTLH7vPgcM5gh8Apb",
+            "36Dcg1M7KxjeMAkNmg7AjtL9GUKxhJ8E6FgmgsqNh3S6CRf7",
             1152921504606846976
           ],
           [
-            "5DcdaPn3xDFG6uPmdSseHY2iDdo4gupoAWXhDVHm7qeVPkUe",
+            "32iaA5xUjjYVUTgtDvYNBADyyZN7NGMUK8pbzdphYstK1nMj",
             1152921504606846976
           ],
           [
-            "5G1FvSFtoJsunaPFUHTmW9p3P8B5U78715RiQm6VULavsKCu",
+            "31uYW9iucy3AHTMc5UbbtPqFvnxnBZF5jJ5Lbvd5WSv8APtS",
             1152921504606846976
           ],
           [
-            "5CAp5EEym1g5JFin5JUzMzAQavRaNDcc6bNgmZB85pGciffm",
+            "32MgJnoLS55K7ZNUyMwtV7Ks7p45GgCjvi7agpm2SvLkZGrZ",
             1152921504606846976
           ]
         ],
         "vesting": []
       },
       "sudo": {
-        "key": "5Gdgoyey8Zg1MgPWGn7GBo3RRXz3DjLDqzmwVdeQ36RN7AjF"
+        "key": "31nq3pcnYvaPpo9yQGnK5rgF21Jpnvr6wvN2CHzSEYZkZhTP"
       }
     }
   }
