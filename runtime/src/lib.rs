@@ -93,9 +93,9 @@ pub mod opaque {
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("dothereum"),
 	impl_name: create_runtime_str!("dothereum"),
-	authoring_version: 3,
-	spec_version: 4,
-	impl_version: 4,
+	authoring_version: 1003,
+	spec_version: 1004,
+	impl_version: 1004,
 	apis: RUNTIME_API_VERSIONS,
 };
 
@@ -113,11 +113,11 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 /// `SLOT_DURATION` instead (like the timestamp module for calculating the
 /// minimum period).
 /// <https://research.web3.foundation/en/latest/polkadot/BABE/Babe/#6-practical-results>
-pub const MILLISECS_PER_BLOCK: u64 = 6000;
+pub const MILLISECS_PER_BLOCK: u64 = 15000;
 
 pub const SLOT_DURATION: u64 = MILLISECS_PER_BLOCK;
 
-pub const EPOCH_DURATION_IN_BLOCKS: u32 = 10 * MINUTES;
+pub const EPOCH_DURATION_IN_BLOCKS: u32 = 4 * HOURS;
 
 // These time units are defined in number of blocks.
 pub const MINUTES: BlockNumber = 60_000 / (MILLISECS_PER_BLOCK as BlockNumber);

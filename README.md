@@ -7,9 +7,14 @@ The Dothereum reference node implemention; written in Rust, based on the Substra
 - `stage`: Testnet 0.1 Alpha
 - `id`: `xth_alpha`
 - `protocolId`: `xth`
+- `specVersion`: 1004
 - `ss58Format`: 20
 - `tokenDecimals`: 18
 - `tokenSymbol`: XTH
+- `expectedBlockTime`: 15 seconds
+- `epochDuration`: 4 hours
+- `genesisStateRoot`: `0x809c…2adf`
+- `genesisBlockHash`: `0x6646…1e89`
 
 You can directly connect to the public testnet with:
 
@@ -17,6 +22,7 @@ You can directly connect to the public testnet with:
 dothereum --chain ./res/dothereum.json
 ```
 
+- Bootnode: `/ip4/51.15.116.226/tcp/34242/p2p/QmTwkE6jMezw3JdrMKTBqT7RKMn2XuKnSnYWHWM7Y3pSKJ`
 - Telemetry: [telemetry.polkadot.io/#list/Dothereum 0.1 Alpha](https://telemetry.polkadot.io/#list/Dothereum%200.1%20Alpha)
 
 ### Build the node from source
