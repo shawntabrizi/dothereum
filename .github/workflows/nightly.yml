@@ -1,5 +1,12 @@
-name: Rust
-on: [pull_request]
+name: Nightly
+on:
+  push:
+    branches:
+    - master
+    - beta
+    - stable
+  schedule:
+    - cron: 0 1 * * *
 
 jobs:
   build:
@@ -15,7 +22,7 @@ jobs:
         ./scripts/init.sh
         export PATH=$PATH:$HOME/.cargo/bin
         export RUST_LOG=debug
-        export RUST_BACKTRACE=1 
+        export RUST_BACKTRACE=1
         rustc --version
         cargo --version
         rustup --version
