@@ -1,0 +1,29 @@
+name: Rust
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Action
+      uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: |
+        git status
+        sudo apt update
+        sudo apt install -y build-essential cmake pkg-config clang
+        ./scripts/init.sh
+        export PATH=$PATH:$HOME/.cargo/bin
+        export RUST_LOG=debug
+        export RUST_BACKTRACE=1 
+        rustc --version
+        cargo --version
+        rustup --version
+    - name: Create Debug Build
+      run: |
+        cargo build --verbose
+        cargo run -- --version
+    - name: Run Test Suite
+      run: |
+        cargo check --verbose
+        cargo test --all --verbose
