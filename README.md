@@ -1,4 +1,4 @@
-# Dothereum
+# Dothereum ![Badge](https://github.com/dothereum/dothereum/workflows/Nightly/badge.svg)
 
 The Dothereum reference node implemention; written in Rust, based on the Substrate `v2.0` framework.
 
