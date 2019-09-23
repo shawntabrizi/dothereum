@@ -1,7 +1,7 @@
 use primitives::{Pair, Public};
 use dothereum_runtime::{
 	AccountId, BabeConfig, BalancesConfig, GenesisConfig, GrandpaConfig,
-	SudoConfig, IndicesConfig, SystemConfig, WASM_BINARY, 
+	SudoConfig, IndicesConfig, SystemConfig, WASM_BINARY,
 };
 use babe_primitives::{AuthorityId as BabeId};
 use grandpa_primitives::{AuthorityId as GrandpaId};
@@ -22,6 +22,22 @@ pub enum Alternative {
 	Development,
 	/// Whatever the current runtime is, with simple Alice/Bob auths.
 	LocalTestnet,
+	/// Preconfigured, public Dothereum Alpha testnet.
+	AlphaTestnet,
+	/// Preconfigured, public Dothereum Beta testnet.
+	BetaTestnet,
+}
+
+/// Utilizes Rust-Embed to bundle the chain specifications from `res/` with the
+/// node binaries for user's convenience: `Resources::get("dothereum.json")`
+#[derive(RustEmbed)]
+#[folder = "res/"]
+struct Resources;
+
+/// Helper function to load and bundle a chain specification from `res/`.
+pub fn get_spec_from_file(file: &str) -> ChainSpec {
+	let bytes = Resources::get(file).expect("the chain spec file path should exist");
+	ChainSpec::from_json_bytes(bytes).expect("the chain spec file should contain valid json")
 }
 
 /// Helper function to generate a crypto pair from seed
@@ -46,8 +62,8 @@ impl Alternative {
 	pub(crate) fn load(self) -> Result<ChainSpec, String> {
 		Ok(match self {
 			Alternative::Development => ChainSpec::from_genesis(
-				"Development",
-				"dev",
+				"Dothereum Development",
+				"dev_xth",
 				|| testnet_genesis(vec![
 					get_authority_keys_from_seed("Alice"),
 				],
@@ -66,12 +82,12 @@ impl Alternative {
 				None
 			),
 			Alternative::LocalTestnet => ChainSpec::from_genesis(
-				"Local Testnet",
-				"local_testnet",
+				"Dothereum Local Testnet",
+				"local_xth",
 				|| testnet_genesis(vec![
 					get_authority_keys_from_seed("Alice"),
 					get_authority_keys_from_seed("Bob"),
-				], 
+				],
 				get_from_seed::<AccountId>("Alice"),
 				vec![
 					get_from_seed::<AccountId>("Alice"),
@@ -94,20 +110,24 @@ impl Alternative {
 				None,
 				None
 			),
+			Alternative::AlphaTestnet => get_spec_from_file("alpha.json"),
+			Alternative::BetaTestnet => get_spec_from_file("beta.json"),
 		})
 	}
 
 	pub(crate) fn from(s: &str) -> Option<Self> {
 		match s {
 			"dev" => Some(Alternative::Development),
-			"" | "local" => Some(Alternative::LocalTestnet),
+			"local" => Some(Alternative::LocalTestnet),
+			"" | "alpha" => Some(Alternative::AlphaTestnet),
+			"beta" => Some(Alternative::BetaTestnet),
 			_ => None,
 		}
 	}
 }
 
 fn testnet_genesis(initial_authorities: Vec<(AccountId, AccountId, GrandpaId, BabeId)>,
-	root_key: AccountId, 
+	root_key: AccountId,
 	endowed_accounts: Vec<AccountId>,
 	_enable_println: bool) -> GenesisConfig {
 	GenesisConfig {

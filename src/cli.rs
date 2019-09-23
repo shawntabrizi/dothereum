@@ -17,12 +17,12 @@ pub fn run<I, T, E>(args: I, exit: E, version: VersionInfo) -> error::Result<()>
 	match parse_and_prepare::<NoCustom, NoCustom, _>(&version, "dothereum", args) {
 		ParseAndPrepare::Run(cmd) => cmd.run::<(), _, _, _, _>(load_spec, exit,
 		|exit, _cli_args, _custom_args, config| {
-			info!("{}", version.name);
-			info!("  version {}", config.full_version());
-			info!("  by {}, 2019", version.author);
-			info!("Chain specification: {}", config.chain_spec.name());
-			info!("Node name: {}", config.name);
-			info!("Roles: {:?}", config.roles);
+			info!("  _ _    {}", version.name);
+			info!(" | | \\      version {}", config.full_version());
+			info!(" | |\\_\\     by {}, 2019", version.author);
+			info!(" | |/ /  Chain specification: {}", config.chain_spec.name());
+			info!(" |_|_/   Node name: {}", config.name);
+			info!("         Roles: {:?}", config.roles);
 			let runtime = Runtime::new().map_err(|e| format!("{:?}", e))?;
 			match config.roles {
 				ServiceRoles::LIGHT => run_until_exit(

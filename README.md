@@ -19,7 +19,7 @@ The Dothereum reference node implemention; written in Rust, based on the Substra
 You can directly connect to the public testnet with:
 
 ```bash
-dothereum --chain ./res/dothereum.json
+dothereum --chain alpha
 ```
 
 - Bootnode: `/ip4/51.15.116.226/tcp/34242/p2p/QmTwkE6jMezw3JdrMKTBqT7RKMn2XuKnSnYWHWM7Y3pSKJ`

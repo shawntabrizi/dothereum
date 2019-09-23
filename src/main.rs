@@ -8,6 +8,9 @@ mod chain_spec;
 mod service;
 mod cli;
 
+#[macro_use]
+extern crate rust_embed;
+
 pub use substrate_cli::{VersionInfo, IntoExit, error};
 
 fn main() {
