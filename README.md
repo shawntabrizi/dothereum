@@ -1,4 +1,4 @@
-# Dothereum ![Badge](https://github.com/dothereum/dothereum/workflows/Nightly/badge.svg)
+# Dothereum [![Badge](https://github.com/dothereum/dothereum/workflows/Nightly/badge.svg)](https://github.com/dothereum/dothereum/actions) [![Discord](https://img.shields.io/discord/587923474471845898?label=Discord)](https://discord.gg/JcAQz58)
 
 The Dothereum reference node implemention; written in Rust, based on the Substrate `v2.0` framework.
 
