@@ -21,7 +21,7 @@ fn main() {
 		executable_name: "dothereum",
 		author: "Schoedon",
 		description: "Dothereum",
-		support_url: "https://github.com/dothereum/dothereum/issues",
+		support_url: "https://dothereum.net",
 	};
 
 	if let Err(e) = cli::run(::std::env::args(), cli::Exit, version) {
