@@ -24,8 +24,6 @@ pub enum Alternative {
 	LocalTestnet,
 	/// Preconfigured, public Dothereum Alpha testnet.
 	AlphaTestnet,
-	/// Preconfigured, public Dothereum Beta testnet.
-	BetaTestnet,
 }
 
 /// Utilizes Rust-Embed to bundle the chain specifications from `res/` with the
@@ -111,7 +109,6 @@ impl Alternative {
 				None
 			),
 			Alternative::AlphaTestnet => get_spec_from_file("alpha.json"),
-			Alternative::BetaTestnet => get_spec_from_file("beta.json"),
 		})
 	}
 
@@ -120,7 +117,6 @@ impl Alternative {
 			"dev" => Some(Alternative::Development),
 			"local" => Some(Alternative::LocalTestnet),
 			"" | "alpha" => Some(Alternative::AlphaTestnet),
-			"beta" => Some(Alternative::BetaTestnet),
 			_ => None,
 		}
 	}

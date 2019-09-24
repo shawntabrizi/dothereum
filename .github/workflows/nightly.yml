@@ -2,9 +2,9 @@ name: Nightly
 on:
   push:
     branches:
-    - master
+    - alpha
     - beta
-    - stable
+    - gamma
   schedule:
     - cron: 0 1 * * *
 
