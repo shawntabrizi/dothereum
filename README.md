@@ -22,7 +22,11 @@ You can directly connect to the public testnet with:
 dothereum --chain alpha
 ```
 
-- Bootnode: `/ip4/51.15.116.226/tcp/34242/p2p/QmTwkE6jMezw3JdrMKTBqT7RKMn2XuKnSnYWHWM7Y3pSKJ`
+- Bootnodes:
+  - `/ip4/51.15.116.226/tcp/34242/p2p/QmTwkE6jMezw3JdrMKTBqT7RKMn2XuKnSnYWHWM7Y3pSKJ`
+  - `/ip4/51.15.119.157/tcp/45678/p2p/Qmd9BogCtnfKj8PcJMDVNg9sNQk7Cv2pDrhatCq6KggFHB`
+  - `/ip4/51.15.97.240/tcp/45678/p2p/QmfPSEGncA4KrdEaLU1LWUt93Dsyv3gnoHwaqPKCeSVCSM`
+  - `/ip4/51.158.190.99/tcp/45678/p2p/QmXTnwNMVL8wr8H7iq1jKhmhTEDEQSWeKiQNn3AoAF3hfK`
 - Telemetry: [telemetry.polkadot.io/#list/Dothereum 0.1 Alpha](https://telemetry.polkadot.io/#list/Dothereum%200.1%20Alpha)
 
 ### Build the node from source
@@ -31,26 +35,23 @@ dothereum --chain alpha
   ```bash
   curl https://sh.rustup.rs -sSf | sh
   ```
-2. Install required tools:
+2. Install additional dependencies, i.e,. for Ubuntu:
+  ```bash
+  sudo apt install build-essential cmake pkg-config libssl-dev openssl git clang libclang-dev
+  ```
+3. Install required tools:
   ```bash
   ./scripts/init.sh
   ```
-2.a) install libssl-dev in Ubuntu or openssl-devel in fedora
-for avoiding trouble with ubuntu, i suggest 
-  ```bash
-sudo apt-get install clang* 
-  ```
-as well
-
-3. Ensure Cargo is in your `$PATH`:
+4. Ensure Cargo is in your `$PATH`:
   ```bash
   export PATH=$PATH:$HOME/.cargo/bin
   ```
-4. Build the node
+5. Build the node
   ```bash
   cargo build --release
   ```
-5. The binary can be found in
+6. The binary can be found in
   ```bash
   ./target/release/dothereum
   ```
