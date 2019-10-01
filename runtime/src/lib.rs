@@ -93,9 +93,9 @@ pub mod opaque {
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("dothereum"),
 	impl_name: create_runtime_str!("dothereum"),
-	authoring_version: 1003,
-	spec_version: 1004,
-	impl_version: 1004,
+	authoring_version: 1004,
+	spec_version: 1005,
+	impl_version: 1005,
 	apis: RUNTIME_API_VERSIONS,
 };
 
@@ -346,7 +346,6 @@ impl_runtime_apis! {
 	}
 
 	impl fg_primitives::GrandpaApi<Block> for Runtime {
-
 		fn grandpa_authorities() -> Vec<(GrandpaId, GrandpaWeight)> {
 			Grandpa::grandpa_authorities()
 		}
