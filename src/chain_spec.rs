@@ -119,8 +119,8 @@ impl Alternative {
 		match s {
 			"dev" => Some(Alternative::Development),
 			"local" => Some(Alternative::LocalTestnet),
-			"" | "alpha" => Some(Alternative::AlphaTestnet),
-			"beta" => Some(Alternative::BetaTestnet),
+			"alpha" => Some(Alternative::AlphaTestnet),
+			"" | "beta" => Some(Alternative::BetaTestnet),
 			_ => None,
 		}
 	}
