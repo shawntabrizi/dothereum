@@ -2,24 +2,24 @@
 
 The Dothereum reference node implemention; written in Rust, based on the Substrate `v2.0` framework.
 
-### Dothereum 0.1 Alpha
+### Dothereum Beta
 
-- `stage`: Testnet 0.1 Alpha
-- `id`: `xth_alpha`
+- `stage`: Testnet 0.2 Beta
+- `id`: `xth_beta`
 - `protocolId`: `xth`
-- `specVersion`: 1004
+- `slip44Index`: 442
+- `specVersion`: 1006
 - `ss58Format`: 20
 - `tokenDecimals`: 18
 - `tokenSymbol`: XTH
 - `expectedBlockTime`: 15 seconds
-- `epochDuration`: 4 hours
-- `genesisStateRoot`: `0x809c…2adf`
-- `genesisBlockHash`: `0x6646…1e89`
+- `genesisStateRoot`: `0x9607…9a07`
+- `genesisBlockHash`: `0x6b0a…d171`
 
 You can directly connect to the public testnet with:
 
 ```bash
-dothereum --chain alpha
+dothereum --chain beta
 ```
 
 - Bootnodes:
