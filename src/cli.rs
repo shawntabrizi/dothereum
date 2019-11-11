@@ -3,8 +3,9 @@ use futures::{future, Future, sync::oneshot};
 use std::cell::RefCell;
 use tokio::runtime::Runtime;
 pub use substrate_cli::{VersionInfo, IntoExit, error};
-use substrate_cli::{informant, parse_and_prepare, ParseAndPrepare, NoCustom};
-use substrate_service::{AbstractService, Roles as ServiceRoles};
+use substrate_cli::{display_role, informant, parse_and_prepare, ParseAndPrepare, NoCustom};
+use substrate_service::{AbstractService, Roles as ServiceRoles, Configuration};
+use aura_primitives::sr25519::{AuthorityPair as AuraPair};
 use crate::chain_spec;
 use log::info;
 
@@ -14,36 +15,37 @@ pub fn run<I, T, E>(args: I, exit: E, version: VersionInfo) -> error::Result<()>
 	T: Into<std::ffi::OsString> + Clone,
 	E: IntoExit,
 {
+	type Config<T> = Configuration<(), T>;
 	match parse_and_prepare::<NoCustom, NoCustom, _>(&version, "dothereum", args) {
-		ParseAndPrepare::Run(cmd) => cmd.run::<(), _, _, _, _>(load_spec, exit,
-		|exit, _cli_args, _custom_args, config| {
+		ParseAndPrepare::Run(cmd) => cmd.run(load_spec, exit,
+		|exit, _cli_args, _custom_args, config: Config<_>| {
 			info!("  _ _    {}", version.name);
 			info!(" | | \\      version {}", config.full_version());
 			info!(" | |\\_\\     by {}, 2019", version.author);
 			info!(" | |/ /  Chain specification: {}", config.chain_spec.name());
 			info!(" |_|_/   Node name: {}", config.name);
-			info!("         Roles: {:?}", config.roles);
+			info!("         Roles: {}", display_role(&config));
 			let runtime = Runtime::new().map_err(|e| format!("{:?}", e))?;
 			match config.roles {
 				ServiceRoles::LIGHT => run_until_exit(
 					runtime,
-				 	service::new_light(config).map_err(|e| format!("{:?}", e))?,
+					service::new_light(config)?,
 					exit
 				),
 				_ => run_until_exit(
 					runtime,
-					service::new_full(config).map_err(|e| format!("{:?}", e))?,
+					service::new_full(config)?,
 					exit
 				),
-			}.map_err(|e| format!("{:?}", e))
+			}
 		}),
-		ParseAndPrepare::BuildSpec(cmd) => cmd.run(load_spec),
-		ParseAndPrepare::ExportBlocks(cmd) => cmd.run_with_builder::<(), _, _, _, _, _>(|config|
+		ParseAndPrepare::BuildSpec(cmd) => cmd.run::<NoCustom, _, _, _>(load_spec),
+		ParseAndPrepare::ExportBlocks(cmd) => cmd.run_with_builder(|config: Config<_>|
 			Ok(new_full_start!(config).0), load_spec, exit),
-		ParseAndPrepare::ImportBlocks(cmd) => cmd.run_with_builder::<(), _, _, _, _, _>(|config|
+		ParseAndPrepare::ImportBlocks(cmd) => cmd.run_with_builder(|config: Config<_>|
 			Ok(new_full_start!(config).0), load_spec, exit),
 		ParseAndPrepare::PurgeChain(cmd) => cmd.run(load_spec),
-		ParseAndPrepare::RevertChain(cmd) => cmd.run_with_builder::<(), _, _, _, _>(|config|
+		ParseAndPrepare::RevertChain(cmd) => cmd.run_with_builder(|config: Config<_>|
 			Ok(new_full_start!(config).0), load_spec),
 		ParseAndPrepare::CustomCommand(_) => Ok(())
 	}?;
