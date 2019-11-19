@@ -21,7 +21,7 @@ pub fn run<I, T, E>(args: I, exit: E, version: VersionInfo) -> error::Result<()>
 		|exit, _cli_args, _custom_args, config: Config<_>| {
 			info!("  _ _    {}", version.name);
 			info!(" | | \\      version {}", config.full_version());
-			info!(" | |\\_\\     by {}, 2019", version.author);
+			info!(" | |\\_\\     by {}, 2019 - 2020", version.author);
 			info!(" | |/ /  Chain specification: {}", config.chain_spec.name());
 			info!(" |_|_/   Node name: {}", config.name);
 			info!("         Roles: {}", display_role(&config));

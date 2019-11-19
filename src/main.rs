@@ -19,7 +19,7 @@ fn main() -> Result<(), cli::error::Error> {
 		commit: env!("VERGEN_SHA_SHORT"),
 		version: env!("CARGO_PKG_VERSION"),
 		executable_name: "dothereum",
-		author: "Schoedon",
+		author: "Schoedon, Akinfiev",
 		description: "Dothereum",
 		support_url: "https://dothereum.net",
 	};
