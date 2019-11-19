@@ -1,0 +1,20 @@
+[package]
+name = "dothereum-primitives"
+version = "0.3.0"
+authors = ["Parity Technologies"]
+edition = "2018"
+
+[dependencies]
+primitives = { package = "substrate-primitives", default-features = false, git = 'https://github.com/paritytech/substrate.git' }
+sr-primitives = { default-features = false, git = 'https://github.com/paritytech/substrate.git' }
+
+[dev-dependencies]
+substrate-serializer = { git = 'https://github.com/paritytech/substrate.git' }
+pretty_assertions = "0.6.1"
+
+[features]
+default = ["std"]
+std = [
+	"primitives/std",
+	"sr-primitives/std",
+]

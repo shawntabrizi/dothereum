@@ -1,13 +1,27 @@
 [package]
 name = "dothereum"
-version = "0.2.1"
-authors = ["Schoedon, Akinfiev"]
+version = "0.3.0"
+authors = ["Schoedon"]
 build = "build.rs"
 edition = "2018"
 
 [[bin]]
 name = "dothereum"
-path = "src/main.rs"
+path = "cli/bin/main.rs"
+
+[workspace]
+members = [
+	"cli",
+	"executor",
+	"primitives",
+	"rpc",
+	"rpc-client",
+	"runtime",
+	"testing",
+]
+
+[profile.release]
+panic = "unwind"
 
 [dependencies]
 derive_more = "0.15.0"
@@ -19,7 +33,6 @@ exit-future = "0.1.4"
 parking_lot = "0.9.0"
 codec = { package = "parity-scale-codec", version = "1.1.0" }
 trie-root = "0.15.2"
-rust-embed = "5.1.0"
 sr-io = { git = 'https://github.com/paritytech/substrate.git' }
 substrate-cli = { git = 'https://github.com/paritytech/substrate.git' }
 primitives = { package = "substrate-primitives", git = 'https://github.com/paritytech/substrate.git' }
@@ -28,15 +41,14 @@ substrate-service = { git = 'https://github.com/paritytech/substrate.git' }
 inherents = { package = "substrate-inherents", git = 'https://github.com/paritytech/substrate.git' }
 transaction-pool = { package = "substrate-transaction-pool", git = 'https://github.com/paritytech/substrate.git' }
 network = { package = "substrate-network", git = 'https://github.com/paritytech/substrate.git' }
-aura = { package = "substrate-consensus-aura", git = 'https://github.com/paritytech/substrate.git' }
-aura-primitives = { package = "substrate-consensus-aura-primitives", git = 'https://github.com/paritytech/substrate.git' }
+babe = { package = "substrate-consensus-babe", git = 'https://github.com/paritytech/substrate.git' }
+babe-primitives = { package = "substrate-consensus-babe-primitives", git = 'https://github.com/paritytech/substrate.git' }
 grandpa = { package = "substrate-finality-grandpa", git = 'https://github.com/paritytech/substrate.git' }
 grandpa-primitives = { package = "substrate-finality-grandpa-primitives", git = 'https://github.com/paritytech/substrate.git' }
 substrate-client = { git = 'https://github.com/paritytech/substrate.git' }
-dothereum-runtime = { path = "runtime" }
-sr-primitives = { git = 'https://github.com/paritytech/substrate.git' }
 basic-authorship = { package = "substrate-basic-authorship", git = 'https://github.com/paritytech/substrate.git' }
+dothereum-runtime = { path = "runtime" }
+dothereum-cli = { path = "cli" }
 
 [build-dependencies]
 vergen = "3.0.4"
-build-script-utils = { package = "substrate-build-script-utils", git = 'https://github.com/paritytech/substrate.git' }

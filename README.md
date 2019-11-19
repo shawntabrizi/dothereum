@@ -2,34 +2,32 @@
 
 The Dothereum reference node implemention; written in Rust, based on the Substrate `v2.0` framework.
 
-### Dothereum Beta
+### Dothereum 0.1 Alpha
 
-- `stage`: Testnet 0.2 Beta
-- `id`: `xth_beta`
+- `stage`: Testnet 0.1 Alpha
+- `id`: `xth_alpha`
 - `protocolId`: `xth`
-- `slip44Index`: 442
-- `specVersion`: 1006
+- `specVersion`: 1004
 - `ss58Format`: 20
 - `tokenDecimals`: 18
 - `tokenSymbol`: XTH
 - `expectedBlockTime`: 15 seconds
-- `genesisStateRoot`: `0x9607…9a07`
-- `genesisBlockHash`: `0x6b0a…d171`
+- `epochDuration`: 4 hours
+- `genesisStateRoot`: `0x809c…2adf`
+- `genesisBlockHash`: `0x6646…1e89`
 
 You can directly connect to the public testnet with:
 
 ```bash
-dothereum --chain beta
+dothereum --chain alpha
 ```
 
 - Bootnodes:
-  - `/ip4/104.215.6.163/tcp/30342/p2p/QmdNPDNNB3Ct1qDpfrXPEs7J6cdQZZj8b6ZddM3kQPReY9`
-  - `/ip4/40.115.178.90/tcp/30342/p2p/QmUP3WTDzfjsPpevHvv5ZHnANBuQRpDLEzzKtwDDHtgbN1`
-  - `/ip4/51.15.116.226/tcp/32424/p2p/QmPcQx2Qx3oxmfNJDg33k3xaKngw4ChxrckCRrbfLnKGjs`
-  - `/ip4/51.15.70.7/tcp/34242/p2p/Qmd3p9jaHC5wBjvTbEvPqRMpDr5xnUoAzxnGqJPNw6F8KJ`
-  - `/ip4/51.15.71.68/tcp/34242/p2p/QmNZgNhqEHdLgsYwvDPPxp6mY8zc5LoQB96Nkgdqzz5cxs`
-  - `/ip4/51.158.191.43/tcp/34242/p2p/QmTKikQzqZkq4rjUWC2reQSbGtgBh2J2CGKZPUTVjFH8tj`
-- Telemetry: [telemetry.polkadot.io/#list/Dothereum Beta](https://telemetry.polkadot.io/#list/Dothereum%20Beta)
+  - `/ip4/51.15.116.226/tcp/34242/p2p/QmTwkE6jMezw3JdrMKTBqT7RKMn2XuKnSnYWHWM7Y3pSKJ`
+  - `/ip4/51.15.119.157/tcp/45678/p2p/Qmd9BogCtnfKj8PcJMDVNg9sNQk7Cv2pDrhatCq6KggFHB`
+  - `/ip4/51.15.97.240/tcp/45678/p2p/QmfPSEGncA4KrdEaLU1LWUt93Dsyv3gnoHwaqPKCeSVCSM`
+  - `/ip4/51.158.190.99/tcp/45678/p2p/QmXTnwNMVL8wr8H7iq1jKhmhTEDEQSWeKiQNn3AoAF3hfK`
+- Telemetry: [telemetry.polkadot.io/#list/Dothereum 0.1 Alpha](https://telemetry.polkadot.io/#list/Dothereum%200.1%20Alpha)
 
 ### Build the node from source
 

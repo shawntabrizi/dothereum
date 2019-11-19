@@ -1,0 +1,16 @@
+[package]
+name = "dothereum-rpc"
+version = "0.3.0"
+authors = ["Parity Technologies"]
+edition = "2018"
+
+[dependencies]
+client = { package = "substrate-client", git = 'https://github.com/paritytech/substrate.git' }
+jsonrpc-core = "14.0.3"
+dothereum-primitives = { path = "../primitives" }
+dothereum-runtime = { path = "../runtime" }
+sr-primitives = { git = 'https://github.com/paritytech/substrate.git' }
+paint-contracts-rpc = { git = 'https://github.com/paritytech/substrate.git' }
+paint-transaction-payment-rpc = { git = 'https://github.com/paritytech/substrate.git' }
+paint-system-rpc = { git = 'https://github.com/paritytech/substrate.git' }
+transaction_pool = { package = "substrate-transaction-pool", git = 'https://github.com/paritytech/substrate.git' }
