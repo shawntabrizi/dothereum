@@ -1,6 +1,6 @@
 [package]
 name = "dothereum-runtime"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Schoedon, Akinfiev"]
 edition = "2018"
 
@@ -10,6 +10,7 @@ aura-primitives = { package = "substrate-consensus-aura-primitives", git = "http
 balances = { package = "paint-balances", git = "https://github.com/paritytech/substrate.git", default-features = false }
 block-builder-api = { package = "substrate-block-builder-runtime-api", git = "https://github.com/paritytech/substrate.git", default-features = false}
 codec = { package = "parity-scale-codec", version = "1.0.0", default-features = false, features = ["derive"] }
+evm = { package = "paint-evm", git = "https://github.com/paritytech/substrate.git", default-features = false }
 executive = { package = "paint-executive", git = "https://github.com/paritytech/substrate.git", default-features = false }
 grandpa = { package = "paint-grandpa", git = "https://github.com/paritytech/substrate.git", default-features = false }
 indices = { package = "paint-indices", git = "https://github.com/paritytech/substrate.git", default-features = false }
@@ -17,10 +18,12 @@ inherents = { package = "substrate-inherents", git = "https://github.com/parityt
 offchain-primitives = { package = "substrate-offchain-primitives", git = "https://github.com/paritytech/substrate.git", default-features = false }
 primitives = { package = "substrate-primitives", git = "https://github.com/paritytech/substrate.git", default-features = false }
 randomness-collective-flip = { package = "paint-randomness-collective-flip", git = "https://github.com/paritytech/substrate.git", default-features = false }
+rlp = { version = "0.4.3", default-features = false }
 rstd = { package = "sr-std", git = "https://github.com/paritytech/substrate.git", default-features = false }
 runtime-io = { package = "sr-io", git = "https://github.com/paritytech/substrate.git", default-features = false }
 safe-mix = { version = "1.0.0", default-features = false }
 serde = { version = "1.0.102", optional = true, features = ["derive"] }
+sha3 = { version = "0.8.2", default-features = false }
 sr-api = { git = "https://github.com/paritytech/substrate.git", default-features = false }
 sr-primitives = { git = "https://github.com/paritytech/substrate.git", default-features = false }
 substrate-session = { git = "https://github.com/paritytech/substrate.git", default-features = false }
@@ -44,6 +47,7 @@ std = [
 	"balances/std",
 	"block-builder-api/std",
 	"codec/std",
+	"evm/std",
 	"executive/std",
 	"grandpa/std",
 	"indices/std",
@@ -51,10 +55,12 @@ std = [
 	"offchain-primitives/std",
 	"primitives/std",
 	"randomness-collective-flip/std",
+	"rlp/std",
 	"rstd/std",
 	"runtime-io/std",
 	"safe-mix/std",
 	"serde",
+	"sha3/std",
 	"sr-api/std",
 	"sr-primitives/std",
 	"substrate-session/std",
