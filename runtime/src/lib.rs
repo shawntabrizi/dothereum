@@ -9,7 +9,7 @@
 include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
 use rstd::prelude::*;
-use primitives::OpaqueMetadata;
+use primitives::{OpaqueMetadata, U256, H160};
 use sr_primitives::{
 	ApplyResult, transaction_validity::TransactionValidity, generic, create_runtime_str,
 	impl_opaque_keys, MultiSignature
@@ -33,6 +33,7 @@ pub use timestamp::Call as TimestampCall;
 pub use balances::Call as BalancesCall;
 pub use sr_primitives::{Permill, Perbill};
 pub use support::{StorageValue, construct_runtime, parameter_types, traits::Randomness};
+pub use evm::{ConvertAccountId, FeeCalculator};
 
 /// An index to a block.
 pub type BlockNumber = u32;
@@ -223,6 +224,36 @@ impl transaction_payment::Trait for Runtime {
 impl sudo::Trait for Runtime {
 	type Event = Event;
 	type Proposal = Call;
+}
+
+// The EVM will use a fixed gas price for now.
+struct FixedGasPrice;
+impl FeeCalculator for FixedGasPrice {
+	fn gas_price() -> U256 {
+		// The gas price is always 1 GWei XTH per 1 unit of gas.
+		// Todo: allow users to dynamically adjust the gas price.
+		1_000_000_000
+	}
+}
+
+// Use truncated account IDs to convert for EVM accounts.
+struct TruncatedAccountId;
+impl<AccountId> ConvertAccountId<AccountId> for TruncatedAccountId {
+	fn convert_account_id(account_id: &AccountId) -> H160 {
+		// Todo: this needs a proper implementation.
+		// Either truncate the first several bits and return the resulting H160;
+		// Or hashing directly is easier to figure this out.
+		unimplemented!();
+	}
+}
+
+// Implement the EVM Trait for the Dothereum Runtime.
+impl evm::Trait for Runtime {
+	type FeeCalculator = FixedGasPrice;
+	type ConvertAccountId = TruncatedAccountId;
+	type Currency = Balances;
+	type Event = Event;
+	type Precompiles = ();
 }
 
 construct_runtime!(
