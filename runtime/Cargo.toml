@@ -5,20 +5,20 @@ authors = ["Schoedon, Akinfiev"]
 edition = "2018"
 
 [dependencies]
-aura = { package = "paint-aura", git = "https://github.com/paritytech/substrate.git", default-features = false }
+aura = { package = "pallet-aura", git = "https://github.com/paritytech/substrate.git", default-features = false }
 aura-primitives = { package = "substrate-consensus-aura-primitives", git = "https://github.com/paritytech/substrate.git", default-features = false }
-balances = { package = "paint-balances", git = "https://github.com/paritytech/substrate.git", default-features = false }
+balances = { package = "pallet-balances", git = "https://github.com/paritytech/substrate.git", default-features = false }
 block-builder-api = { package = "substrate-block-builder-runtime-api", git = "https://github.com/paritytech/substrate.git", default-features = false}
-codec = { package = "parity-scale-codec", version = "1.0.0", default-features = false, features = ["derive"] }
-evm = { package = "paint-evm", git = "https://github.com/paritytech/substrate.git", default-features = false }
-executive = { package = "paint-executive", git = "https://github.com/paritytech/substrate.git", default-features = false }
-grandpa = { package = "paint-grandpa", git = "https://github.com/paritytech/substrate.git", default-features = false }
-indices = { package = "paint-indices", git = "https://github.com/paritytech/substrate.git", default-features = false }
+codec = { package = "parity-scale-codec", version = "1.1.0", default-features = false, features = ["derive"] }
+evm = { package = "pallet-evm", git = "https://github.com/paritytech/substrate.git", default-features = false }
+executive = { package = "palette-executive", git = "https://github.com/paritytech/substrate.git", default-features = false }
+grandpa = { package = "pallet-grandpa", git = "https://github.com/paritytech/substrate.git", default-features = false }
+indices = { package = "pallet-indices", git = "https://github.com/paritytech/substrate.git", default-features = false }
 inherents = { package = "substrate-inherents", git = "https://github.com/paritytech/substrate.git", default-features = false}
 offchain-primitives = { package = "substrate-offchain-primitives", git = "https://github.com/paritytech/substrate.git", default-features = false }
 primitives = { package = "substrate-primitives", git = "https://github.com/paritytech/substrate.git", default-features = false }
-randomness-collective-flip = { package = "paint-randomness-collective-flip", git = "https://github.com/paritytech/substrate.git", default-features = false }
-rlp = { version = "0.4.3", default-features = false }
+randomness-collective-flip = { package = "pallet-randomness-collective-flip", git = "https://github.com/paritytech/substrate.git", default-features = false }
+rlp = { version = "0.4.4", default-features = false }
 rstd = { package = "sr-std", git = "https://github.com/paritytech/substrate.git", default-features = false }
 runtime-io = { package = "sr-io", git = "https://github.com/paritytech/substrate.git", default-features = false }
 safe-mix = { version = "1.0.0", default-features = false }
@@ -27,11 +27,11 @@ sha3 = { version = "0.8.2", default-features = false }
 sr-api = { git = "https://github.com/paritytech/substrate.git", default-features = false }
 sr-primitives = { git = "https://github.com/paritytech/substrate.git", default-features = false }
 substrate-session = { git = "https://github.com/paritytech/substrate.git", default-features = false }
-sudo = { package = "paint-sudo", git = "https://github.com/paritytech/substrate.git", default-features = false }
-support = { package = "paint-support", git = "https://github.com/paritytech/substrate.git", default-features = false }
-system = { package = "paint-system", git = "https://github.com/paritytech/substrate.git", default-features = false }
-timestamp = { package = "paint-timestamp", git = "https://github.com/paritytech/substrate.git", default-features = false }
-transaction-payment = { package = "paint-transaction-payment", git = "https://github.com/paritytech/substrate.git", default-features = false }
+sudo = { package = "pallet-sudo", git = "https://github.com/paritytech/substrate.git", default-features = false }
+support = { package = "palette-support", git = "https://github.com/paritytech/substrate.git", default-features = false }
+system = { package = "palette-system", git = "https://github.com/paritytech/substrate.git", default-features = false }
+timestamp = { package = "pallet-timestamp", git = "https://github.com/paritytech/substrate.git", default-features = false }
+transaction-payment = { package = "pallet-transaction-payment", git = "https://github.com/paritytech/substrate.git", default-features = false }
 tx-pool-api = { package = "substrate-transaction-pool-runtime-api", git = "https://github.com/paritytech/substrate.git", default-features = false }
 version = { package = "sr-version", git = "https://github.com/paritytech/substrate.git", default-features = false }
 
